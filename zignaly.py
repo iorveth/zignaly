@@ -266,6 +266,8 @@ class ZignalyDriver:
 
 def main():
 
+  # Enable this to be able to run on ssh 
+  
   # display = Display(visible=0, size=(1280, 1024))
   # display.start()
 
