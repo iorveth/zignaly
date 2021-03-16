@@ -74,7 +74,7 @@ class ZignalyDriver:
 
     ## Telebot
     token = self.config.get("telebot", "token")
-    self.bot = telebot.TeleBot(token) 
+    self.bot = telebot.TeleBot(token, parse_mode=None) 
     self.user_id = self.config.getint("telebot", "user_id")
 
   def login(self):
@@ -255,6 +255,7 @@ class ZignalyDriver:
 
       confirm_button = self.driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div/form/div[2]/button')
       confirm_button.click()
+      wait_between(LONG_MIN_RAND, LONG_MAX_RAND)
       wait_between(LONG_MIN_RAND, LONG_MAX_RAND)
 
       print("MCP changed to {}", new_mcp)
