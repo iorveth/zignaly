@@ -75,7 +75,7 @@ class ZignalyDriver:
     ## Telebot
     token = self.config.get("telebot", "token")
     self.bot = telebot.TeleBot(token) 
-    self.user_id = self.config.get("telebot", "user_id")
+    self.user_id = self.config.getint("telebot", "user_id")
 
   def login(self):
     try:
@@ -125,7 +125,7 @@ class ZignalyDriver:
 
       wait_between(MIN_RAND, MAX_RAND)
 
-      self.driver.execute_script('___grecaptcha_cfg.clients[0].$.$.callback(\'{}\');'.format(token))
+      self.driver.execute_script('___grecaptcha_cfg.clients[0].Y.Y.callback(\'{}\');'.format(token))
 
       print("Executed")
 
