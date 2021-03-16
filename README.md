@@ -11,3 +11,11 @@ A tool for MCP adjustment, based on active TSL and DCA data
 
 ## Run
 `python3 zignaly.py`
+
+## SSH
+Uncomment 
+```
+display = Display(visible=0, size=(1280, 1024))
+display.start()
+```
+sudo apt-get install -y xvfb
